@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KLY — Bracelet Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#f7d6d2;
+      --pink-soft:#f3c5c1;
+      --dark-pink:#ce8a89;
+      --text:#5b2a2a;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Poppins, Arial, sans-serif;
+      color:var(--text);
+      background:#faf5f3;
+    }
+
+    /* NAVBAR */
+    nav{
+      width:100%;
+      background:var(--pink);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 40px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.05);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav .logo{
+      font-size:24px;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-family:"Playfair Display", serif;
+      color:var(--text);
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--text);
+      font-weight:500;
+      transition:0.2s;
+    }
+
+    nav a:hover{
+      color:var(--dark-pink);
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:80px 20px 40px;
+    }
+    .hero h2{
+      font-family:'Playfair Display', serif;
+      font-size:54px;
+      color:var(--dark-pink);
+      letter-spacing:1px;
+    }
+    .hero p{
+      margin-top:16px;
+      max-width:760px;
+      margin-left:auto;
+      margin-right:auto;
+      font-size:17px;
+      color:#9a5f5f;
+      line-height:1.7;
+    }
+
+    /* PRODUCT GRID */
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:20px 40px 80px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+      gap:36px;
+      margin-top:30px;
+    }
+    .card{
+      background:var(--white);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.25s ease;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.12);
+    }
+    .product{
+      width:100%;height:340px;
+      background-size:cover;background-position:center;
+    }
+
+    /* Product images */
+    .p1{background-image:url('https://i.ibb.co/Pw1XyPh/gelang1.jpg');}
+    .p2{background-image:url('https://i.ibb.co/4S4Qng8/gelang2.jpg');}
+    .p3{background-image:url('https://i.ibb.co/JvkqM0W/gelang3.jpg');}
+
+    .caption{
+      font-family:'Playfair Display', serif;
+      color:var(--dark-pink);
+      font-size:24px;
+      text-align:center;
+      padding:20px 0 28px;
+    }
+
+    .info{
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      background:var(--white);
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--dark-pink);
+      font-weight:700;
+    }
+  </style>
+</head>
+<body>
+
+   <!-- NAVBAR -->
+  <nav>
+    <div class="logo">🦋 KLY</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="size.html">Size Chart</a></li>
+      <li><a href="kontak.html"><b>Kontak</b></a></li>
+      <li><a href="#">🔍</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Bracelet Collection</h2>
+    <p>Jelajahi beragam koleksi gelang dengan desain menawan dan berkelas. <br>
+    Dari gaya sederhana hingga glamor, setiap karya KLY siap mempercantik setiap momenmu.</p>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <main class="container">
+    <section class="grid">
+      <article class="card">
+        <img class="product" src="1.jpeg" />
+        <div class="caption">Cuff Bracelet</div>
+      </article>
+
+      <article class="card">
+        <img class="product" src="2.jpeg" />
+        <div class="caption">Chain Bracelet</div>
+      </article>
+
+      <article class="card">
+        <img class="product" src="3.jpeg" />
+        <div class="caption">Charm Bracelet</div>
+      </article>
+    </section>
+  </main>
+
+  <div class="info">i</div>
+
+</body>
+</html>

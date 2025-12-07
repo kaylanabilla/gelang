@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KLY — Size Chart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#f7d6d2;
+      --pink-soft:#f3c5c1;
+      --dark-pink:#ce8a89;
+      --text:#5b2a2a;
+      --white:#ffffff;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      font-family:Poppins, Arial, sans-serif;
+      background:#faf5f3;
+      color:var(--text);
+    }
+
+    /* NAVBAR */
+    nav{
+      width:100%;
+      background:var(--pink);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 40px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.05);
+    }
+    nav .logo{
+      font-size:24px;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-family:"Playfair Display", serif;
+    }
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:28px;
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--text);
+      font-weight:500;
+      transition:.2s;
+    }
+    nav a:hover{color:var(--dark-pink)}
+
+        /* GRID PRODUK */
+        .container {
+            width: 85%;
+            margin: 40px auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+
+        .card {
+            text-align: center;
+            width: 100%;
+        }
+
+        .card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .nama {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .harga {
+            font-size: 17px;
+            font-weight: 700;
+            color: #d47f7f;
+            margin: 4px 0 8px;
+        }
+
+        .variasi {
+            font-size: 14px;
+            color: #c27d7d;
+            margin-bottom: 6px;
+        }
+
+        .stok {
+            font-size: 14px;
+            color: #c27d7d;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">🦋 KLY</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="size.html">Size Chart</a></li>
+      <li><a href="kontak.html"><b>Kontak</b></a></li>
+      <li><a href="#">🔍</a></li>
+    </ul>
+  </nav>
+
+    <!-- PRODUK GRID -->
+    <div class="container">
+        <div class="grid">
+
+            <!-- Kard 1 -->
+            <div class="card">
+                <img src="1.jpeg" alt="">
+                <div class="nama">Gelang Rantai</div>
+                <div class="harga">Rp 55.000</div>
+                <div class="variasi">Rose Gold | Silver | Gold <br> Size 6 | 7 | 9 | 12</div>
+                <div class="stok">Stok : 24</div>
+            </div>
+
+            <!-- Kard 2 -->
+            <div class="card">
+                <img src="2.jpeg" alt="">
+                <div class="nama">Gelang Cartier Mata</div>
+                <div class="harga">Rp 65.000</div>
+                <div class="variasi">Rose Gold | Silver | Gold <br> Size 7 | 8 | 9 | 10 | 11 | 12</div>
+                <div class="stok">Stok : 36</div>
+            </div>
+
+            <!-- Kard 3 -->
+            <div class="card">
+                <img src="3.jpeg" alt="">
+                <div class="nama">Gelang Daun Semanggi Kristal</div>
+                <div class="harga">Rp 65.000</div>
+                <div class="variasi">Rose Gold | Silver | Gold <br> Size 8 | 9 | 12</div>
+                <div class="stok">Stok : 18</div>
+            </div>
+
+            <!-- Kard 4 -->
+            <div class="card">
+                <img src="4.jpeg" alt="">
+                <div class="nama">Gelang Serut Kristal</div>
+                <div class="harga">Rp 65.000</div>
+                <div class="variasi">Rose Gold | Silver | Gold <br>Dapat diatur</div>
+                <div class="stok">Stok : 10</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
