@@ -263,46 +263,27 @@ background:rgba(0,0,0,0.3);justify-content:center;align-items:center;z-index:200
     .gender-btn:hover{
       background:var(--white);
     }
-.hamburger{
-  display:none;
-  font-size:28px;
-  cursor:pointer;
-}
-@media(max-width:768px){
-  nav ul{
-    display:none;
-    flex-direction:column;
-    gap:10px;
-    background:var(--pink);
-    position:absolute;
-    top:65px;
-    right:40px;
-    width:200px;
-    padding:20px;
-    border-radius:10px;
-  }
-  .hamburger{
-    display:block;
-  }
-}
 
   </style>
 </head>
 
 
 <body>
-
+  
 <nav>
-  <div class="logo">KLY</div>
-  <div class="hamburger" onclick="toggleMenu()">
-    &#9776;
-  </div>
-  <ul id="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Produk</a></li>
-    <li><a href="#">Tentang</a></li>
-    <li><a href="#">Kontak</a></li>
+  <div class="logo">🦋 KLY</div>
+
+  <ul id="navbarMenu">
+        <li><a href="index.html">Home</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="size.html">Size Chart</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    <li>
+      <div class="cart-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></div>
+    </li>
   </ul>
+
+  <div class="menu-toggle" onclick="toggleMenu()"></div>
 </nav>
 
 <div class="container">
@@ -896,15 +877,6 @@ function confirmSingleOrderAndSendWA(){
     document.getElementById("singleReceiptPopup").style.display = "none";
 }
 // --- RECEIPT (SINGLE ITEM) END ---
-function toggleMenu(){
-  const navLinks = document.getElementById("nav-links");
-  if(navLinks.style.display === "flex"){
-    navLinks.style.display = "none";
-  }else{
-    navLinks.style.display = "flex";
-  }
-}
-
 </script>
 
   <footer>
