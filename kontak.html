@@ -138,26 +138,107 @@
       background:#b07170;
     }
 
+    /* FOOTER */
+    footer{
+      background:var(--pink);
+      color:var(--text);
+      padding:45px 40px;
+      margin-top:40px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:60px;
+      margin-bottom:40px;
+    }
+
+    footer h4{
+      font-size:18px;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+
+    footer p, footer li{
+      font-size:14px;
+      opacity:0.9;
+      line-height:1.7;
+      margin-bottom:8px;
+      list-style:none;
+    }
+
+    .email-box{
+      width:100%;
+      padding:14px 12px;
+      font-size:15px;
+      border-radius:6px;
+      border:none;
+      margin:8px 0 18px;
+    }
+
+    .gender-btn{
+      border:1px solid var(--text);
+      background:none;
+      padding:10px 18px;
+      margin-right:10px;
+      color:var(--text);
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .gender-btn:hover{
+      background:var(--white);
+    }
+    
     /* RESPONSIVE */
     @media(max-width:800px){
       .contact-container{grid-template-columns:1fr}
     }
+/* Hamburger menu */
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul{
+    display:none;
+    flex-direction:column;
+    gap:15px;
+    background:var(--pink);
+    position:absolute;
+    top:65px;
+    right:40px;
+    width:200px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  }
+  .hamburger{
+    display:block;
+  }
+}
 
   </style>
 </head>
 <body>
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">🦋 KLY</div>
+  
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">🦋 KLY</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="katalog.html">Katalog</a></li>
-      <li><a href="size.html">Size Chart</a></li>
-      <li><a href="kontak.html"><b>Kontak</b></a></li>
-      <li><a href="#">🔍</a></li>
-    </ul>
-  </nav>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="katalog.html">Katalog</a></li>
+    <li><a href="size.html">Size Chart</a></li>
+    <li><a href="kontak.html">Kontak</a></li>
+    <li><a href="#">🔍</a></li>
+  </ul>
+</nav>
 
   <!-- HEADING -->
   <section class="header">
@@ -200,5 +281,45 @@
 
   </div>
 
+  <footer>
+    <div class="footer-grid">
+
+      <div>
+        <h4>KLY STORE</h4>
+        <p>Toko Aksesoris handmade yang dibuat secara eksklusif untuk mempercantik style kamu.</p><br>
+        <p>Email: support@kly.com</p>
+        <p>Telepon: +62 853 1111 2222</p>
+      </div>
+
+      <div>
+        <h4>LAYANAN</h4>
+        <p>Bantuan</p>
+        <p>Pengembalian</p>
+        <p>Konfirmasi Pembayaran</p>
+        <p>Promo Partner</p>
+      </div>
+
+      <div>
+        <h4>TENTANG KAMI</h4>
+        <p>About Us</p>
+        <p>Karir</p>
+        <p>Kebijakan Privasi</p>
+        <p>Syarat & Ketentuan</p>
+      </div>
+
+      <div>
+        <h4>BERGABUNG DENGAN KAMI</h4>
+        <p>Dapatkan info produk terbaru & promo spesial!</p>
+
+        <input class="email-box" type="email" placeholder="Masukkan email kamu">
+
+        <button class="gender-btn">WANITA</button>
+        <button class="gender-btn">PRIA</button>
+
+        <p style="font-size:12px;margin-top:10px;">Dengan mendaftar, Anda menyetujui kebijakan privasi kami.</p>
+      </div>
+
+    </div>
+  </footer>
 </body>
 </html>
